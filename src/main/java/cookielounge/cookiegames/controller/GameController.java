@@ -1,5 +1,6 @@
 package cookielounge.cookiegames.controller;
 
+import com.github.cliftonlabs.json_simple.JsonException;
 import cookielounge.cookiegames.main.Game;
 import cookielounge.cookiegames.objects.Player;
 import javafx.application.Platform;
@@ -22,7 +23,7 @@ public class GameController {
     public Button restartButton;
     public boolean intermission = false;
 
-    public void initialize() {
+    public void initialize() throws JsonException {
         addEvent("Day 1: The game has started");
         eventList.setVgap(40); // Change this value to increase or decrease the gap
         eventList.setOrientation(Orientation.VERTICAL);
@@ -68,7 +69,7 @@ public class GameController {
         eventList.getChildren().add(text);
     }
 
-    public void next(ActionEvent actionEvent) {
+    public void next(ActionEvent actionEvent) throws JsonException {
         //check if the playerstodo list is empty
         if (Game.getInstance().getPlayers().size() <=1){
             //end the game
@@ -121,7 +122,7 @@ public class GameController {
 
     }
 
-    public void restart(ActionEvent actionEvent) {
+    public void restart(ActionEvent actionEvent) throws JsonException {
         Game.getInstance().restart();
         eventList.getChildren().clear();
         dayText.setText("Start of new game");

@@ -1,5 +1,6 @@
 package cookielounge.cookiegames.controller;
 
+import com.github.cliftonlabs.json_simple.JsonException;
 import cookielounge.cookiegames.main.Game;
 import cookielounge.cookiegames.objects.Player;
 import javafx.application.Platform;
@@ -97,7 +98,7 @@ public class StartupController {
 
     }
 
-    public void goClick(ActionEvent actionEvent) {
+    public void goClick(ActionEvent actionEvent) throws JsonException {
         //First, check if everything is filled in correctly
         int disctricts;
         ArrayList<Integer> districtList = new ArrayList<>();

@@ -3,15 +3,11 @@ package cookielounge.cookiegames.main;
 import com.github.cliftonlabs.json_simple.JsonException;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
-import cookielounge.cookiegames.controller.GameController;
 import cookielounge.cookiegames.objects.Event;
 import cookielounge.cookiegames.objects.Player;
 import cookielounge.cookiegames.objects.Condition;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,7 +26,7 @@ public class Game {
     private int deathsToday = 0;
 
 
-    public String getEvent() {
+    public String getEvent() throws JsonException {
         //check if only one player is left
         ArrayList<Event> possibleEvents = new ArrayList<>();
         // Filter events based on the current day and other criteria
@@ -209,60 +205,49 @@ public class Game {
         this.players.addAll(players);
     }
 
-    private Game() {
+    private Game() throws JsonException {
         playersToDoToday = new ArrayList<>();
         specialDays.add("special-cookieparty");
         specialDays.add("special-rat invation");
         specialDays.add("special-comic con");
 
-        try (FileReader reader = new FileReader("C:\\Users\\Work\\IdeaProjects\\CookieGames\\src\\main\\resources\\text\\events.json")) {
-            JsonObject jsonObjectEvents = (JsonObject) Jsoner.deserialize(reader);
-            events = new ArrayList<>();
-            for (Object event : (List<Object>) jsonObjectEvents.get("events")) {
-                Event newEvent = new Event();
-                newEvent.setType((String) ((JsonObject) event).get("type"));
-                newEvent.setPrompt((String) ((JsonObject) event).get("prompt"));
-                Number playersNumber = (Number) ((JsonObject) event).get("players");
-                newEvent.setPlayers(playersNumber.intValue());
-                newEvent.setRequiresWeapon((boolean) ((JsonObject) event).get("requires weapon"));
+        JsonObject jsonObjectEvents = (JsonObject) Jsoner.deserialize(new InputStreamReader(getClass().getResourceAsStream("/text/events.json")));
+        events = new ArrayList<>();
+        for (Object event : (List<Object>) jsonObjectEvents.get("events")) {
+            Event newEvent = new Event();
+            newEvent.setType((String) ((JsonObject) event).get("type"));
+            newEvent.setPrompt((String) ((JsonObject) event).get("prompt"));
+            Number playersNumber = (Number) ((JsonObject) event).get("players");
+            newEvent.setPlayers(playersNumber.intValue());
+            newEvent.setRequiresWeapon((boolean) ((JsonObject) event).get("requires weapon"));
 
-                ArrayList<Condition> conditions = new ArrayList<>();
-                if (((JsonObject) event).containsKey("conditions")) {
-                    for (Object condition : (List<Object>) ((JsonObject) event).get("conditions")) {
-                        Condition newCondition = new Condition();
-                        newCondition.setType((String) ((JsonObject) condition).get("type"));
-                        List<Number> playersNumberList = (List<Number>) ((JsonObject) condition).get("players");
-                        newCondition.setPlayerIndexes(playersNumberList.stream().mapToInt(Number::intValue).toArray());
-                        newCondition.setCondition((String) ((JsonObject) condition).get("condition"));
-                        conditions.add(newCondition);
-                    }
+            ArrayList<Condition> conditions = new ArrayList<>();
+            if (((JsonObject) event).containsKey("conditions")) {
+                for (Object condition : (List<Object>) ((JsonObject) event).get("conditions")) {
+                    Condition newCondition = new Condition();
+                    newCondition.setType((String) ((JsonObject) condition).get("type"));
+                    List<Number> playersNumberList = (List<Number>) ((JsonObject) condition).get("players");
+                    newCondition.setPlayerIndexes(playersNumberList.stream().mapToInt(Number::intValue).toArray());
+                    newCondition.setCondition((String) ((JsonObject) condition).get("condition"));
+                    conditions.add(newCondition);
                 }
-                newEvent.setConditions(conditions);
-                if (newEvent.requiresWeapon()){
-                    System.out.println("Event requires weapon");
-                }
-                events.add(newEvent);
             }
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-
-
-        } catch (JsonException e) {
-            throw new RuntimeException(e);
+            newEvent.setConditions(conditions);
+            if (newEvent.requiresWeapon()){
+                System.out.println("Event requires weapon");
+            }
+            events.add(newEvent);
         }
-        try (FileReader reader = new FileReader("C:\\Users\\Work\\IdeaProjects\\CookieGames\\src\\main\\resources\\text\\weapons.json")) {
-            JsonObject jsonObjectWeapons = (JsonObject) Jsoner.deserialize(reader);
-            for (Object weapon : (List<Object>) jsonObjectWeapons.get("weapons")) {
+
+        //LoadResource loader = new LoadResource();
+        //JsonObject jsonObjectWeapons = loader.loadResource("text\\weapons.json");
+        JsonObject jsonObjectWeapons = (JsonObject) Jsoner.deserialize(new InputStreamReader(getClass().getResourceAsStream("/text/weapons.json")));
+        for (Object weapon : (List<Object>) jsonObjectWeapons.get("weapons")) {
                 weapons.add((String) weapon);
             }
-        } catch (IOException | JsonException e) {
-            e.printStackTrace();
-        }
     }
 
-        public static Game getInstance() {
+        public static Game getInstance() throws JsonException {
         if (instance == null) {
             instance = new Game();
             instance.players = new ArrayList<>();
@@ -309,4 +294,6 @@ public class Game {
     public ArrayList<Player> getDeadPlayers() {
         return deadPlayers;
     }
+
+
 }

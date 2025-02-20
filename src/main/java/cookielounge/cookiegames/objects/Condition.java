@@ -1,4 +1,5 @@
 package cookielounge.cookiegames.objects;
+import com.github.cliftonlabs.json_simple.JsonException;
 import cookielounge.cookiegames.main.Game;
 
 import java.util.ArrayList;
@@ -116,7 +117,7 @@ public class Condition {
         Condition.random = random;
     }
 
-    public void apply(ArrayList<Player> selectedPlayers, String weapon) {
+    public void apply(ArrayList<Player> selectedPlayers, String weapon) throws JsonException {
         if (done) return;
         done = true;
         if (Objects.equals(this.getType(), "alliance")) {
@@ -167,7 +168,7 @@ public class Condition {
         }
     }
 
-    private String generateUniqueColor() {
+    private String generateUniqueColor() throws JsonException {
         ArrayList<String> colors = new ArrayList<>();
         //add dark colors
         colors.add("darkred");

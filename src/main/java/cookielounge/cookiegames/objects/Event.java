@@ -1,4 +1,6 @@
 package cookielounge.cookiegames.objects;
+import com.github.cliftonlabs.json_simple.JsonException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,7 +85,7 @@ public class Event {
         this.conditions = conditions;
     }
 
-    public void applyConditions(ArrayList<Player> selectedPlayers, String weapon) {
+    public void applyConditions(ArrayList<Player> selectedPlayers, String weapon) throws JsonException {
         for (Condition condition : conditions) {
             condition.apply(selectedPlayers, weapon);
             condition.setDone(false);
