@@ -1,0 +1,1663 @@
+{
+  "events": [
+    {
+      "type": "cornucopia",
+      "prompt": "_1 runs away from the Cornucopia.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 engage in a fierce battle. _1 emerges victorious and claims _2's _w.",
+      "players": 2,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        },
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "new"
+        }
+      ]
+    },
+    {
+      "type": "alliance",
+      "prompt": "_1 betrays _2 and steals their supplies.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "active end"
+        }
+      ]
+    },
+
+    {
+      "type": "cornucopia",
+      "prompt": "_1 doesn't feel like playing the game but can't leave so depression sets in...",
+      "players": 1,
+      "requires weapon": false,
+      "is depressed": false,
+      "conditions": [
+        {
+          "type": "depression",
+          "players": [1],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 is still sad",
+      "players": 1,
+      "requires weapon": false,
+      "is depressed": true
+    },
+
+
+    {
+      "type": "special-comic con",
+      "prompt": "_1 gets a photo with their favorite celebrity but faints from excitement and has to be taken to the medical tent.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 participate in a scavenger hunt. _1 finds a hidden _nw.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 get into a heated debate about the best superhero. They end up laughing and become friends.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 find themselves in a trivia contest. _2 wins and receives a _nw as a prize.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 died from a rat infection.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 got brainwashed and killed _2 and _3.",
+      "players": 3,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2, 3],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 got eaten by rats.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 got infected. _2 saw and put them out of their misery.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 pushed _2 into all the rats.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 discovered a hidden stash of cheese and used it to distract the rats.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 used their _w to clear a path through the rats.",
+      "players": 1,
+      "requires weapon": true
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 and _2 climbed up a tree to escape the rats, but _2 fell and got swarmed.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },{
+      "type": "special-rat invation",
+      "prompt": "_1 tried to tame the rats with food, but it backfired and they got overwhelmed.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 tried to tame the rats with food, and it worked. _1 is crowned the rat queen.",
+      "players": 1,
+      "requires weapon": false
+    },
+
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 drank too much alcohol and dies.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 dies of embarrassment because of the presentations.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 and _2 got kicked out, putting them out of the Cookiegames.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1, 2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 got strangled by the pride flag.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "The Queers were too much for _1 and _2. It killed them.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1, 2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 entered a cookie-eating contest and choked, dying instantly.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 and _2 started a food fight. In the chaos, _2 got hit in the head and died.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 and _2 started a food fight.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 accidentally sits on a cookie and gets laughed at by everyone.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 eats a strange-looking cookie and starts speaking in rhymes.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 finds a Nerf gun and starts shooting foam darts at everyone. They break the gun and get laughed at.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 challenges _2 to a dance-off. _1 wins, and _2 retreats in embarrassment.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "alliance",
+      "prompt": "_1 and _2 create a secret handshake to symbolize their alliance.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 uses a flute to charm the rats, leading them away like the Pied Piper.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 discovers a secret tunnel and escapes the rat swarm.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 work together to set up a campsite.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "active"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 tries to impress everyone by juggling their _w but accidentally drops it on their foot.",
+      "players": 1,
+      "requires weapon": true
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 sends foot pics and gets clean water in return.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 sends foot pics and gets food in return.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 kills _2 while _2 is sleeping.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 is unable to start a fire and sleeps without warmth.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 tries very hard to make a fire, but fails.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 doesn't want to die a virgin.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 attempts to start a fire, but is unsuccessful.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1, _2, and _3 sleep in shifts.",
+      "players": 3,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1, _2, _3, and _4 tell each other ghost stories to lighten the mood.",
+      "players": 4,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 huddle for warmth.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 cries themselves to sleep.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 run into each other and decide to hug for the night.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 passes out from exhaustion.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 tries to use their _w to fish in a stream but ends up scaring all the fish away.",
+      "players": 1,
+      "requires weapon": true
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 uses their _w as a makeshift backscratcher, enjoying a moment of relief.",
+      "players": 1,
+      "requires weapon": true
+    },
+
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 work together to build a trap for other tributes.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "active"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 get into a heated argument over who gets to keep _1's _w. _1 wins and keeps the _w.",
+      "players": 2,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1, 2],
+          "condition": "active"
+        },
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "active"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 get into a physical fight over a _nw. _1 emerges victorious and claims the _nw. Killing _2 in the process.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        },
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "new"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 get into a physical fight over a _nw. _1 emerges victorious and claims the _nw. Letting _2 cower away.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 bakes a giant cookie and shares it with _2.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 receive a package containing matching t-shirts from a supporter.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 voted in the cookie election",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 voted in the cookie election and got a cookie in return.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 decided to kink-test _2. It was a disaster, _2 was not into it.",
+      "players": 2,
+      "requires weapon": false
+    },{
+      "type": "survival",
+      "prompt": "_1 decided to kink-test _2 with their _w, but hit too hard, ending up killing _2.",
+      "players": 2,
+      "requires weapon": true,
+"conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 decided to kink-test _2. It was a succes, _2 was into it. Asking for more.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 decided to kink-test _2 with their _w. It was a succes, _2 was into it. Asking for more.",
+      "players": 2,
+      "requires weapon": true
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 builds a small shelter to protect themselves from the rats.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 and _2 fend off the rats using improvised weapons.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    }, {
+      "type": "survival",
+      "prompt": "_1 and _2 find a beautiful spot and decide to have a picnic.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    }, {
+      "type": "survival",
+      "prompt": "_1 finds a mirror and spends some time admiring themselves.",
+      "players": 1,
+      "requires weapon": false
+    },{
+      "type": "survival",
+      "prompt": "_1 starts a small garden to grow some food.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+        "type": "survival",
+        "prompt": "_1 and _2 find a hidden cave and decide to explore it together.",
+        "players": 2,
+        "requires weapon": false,
+            "conditions": [
+                {
+                "type": "alliance",
+                "players": [1, 2],
+                "condition": "active"
+                }
+            ]
+        },
+        {
+        "type": "survival",
+        "prompt": "_1 and _2 find a hidden cave and decide to explore it together. They find a treasure chest full of supplies.",
+        "players": 2,
+        "requires weapon": false,
+            "conditions": [
+                {
+                "type": "alliance",
+                "players": [1, 2],
+                "condition": "active"
+                }
+            ]
+        },
+        {
+        "type": "survival",
+        "prompt": "_1 and _2 find a hidden cave and decide to explore it together. They find a treasure chest full of supplies. _1 betrays _2 and takes all the supplies for themselves.",
+        "players": 2,
+        "requires weapon": false,
+            "conditions": [
+                {
+                "type": "alliance",
+                "players": [1, 2],
+                "condition": "active end"
+                }
+            ]
+        },
+        {
+        "type": "survival",
+        "prompt": "_1 and _2 find a hidden cave and decide to explore it together. They find a treasure chest full of supplies. _2 betrays _1 and takes all the supplies for themselves.",
+        "players": 2,
+        "requires weapon": false,
+            "conditions": [
+                {
+                "type": "alliance",
+                "players": [1, 2],
+                "condition": "active end"
+                }
+            ]
+        },
+        {
+        "type": "survival",
+        "prompt": "_1 and _2 find a hidden cave and decide to explore it together. They find a treasure chest full of supplies. They share the supplies and strengthen their bond.",
+        "players": 2,
+        "requires weapon": false,
+            "conditions": [
+                {
+                "type": "alliance",
+                "players": [1, 2],
+                "condition": "active"
+                }
+            ]
+        },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 get into a heated argument over who gets to keep _1's _w. _1 wins the fight and keeps the _w.",
+      "players": 2,
+      "requires weapon": true
+    },{
+      "type": "special-comic con",
+      "prompt": "_1 joins a cosplay parade and enjoys the cheers from the crowd.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 participate in a panel discussion and bond over their favorite fandoms.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 buys a bunch of nerdy merchandise and feels really happy.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 uses a broom to sweep away the rats, feeling like a hero.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 and _2 sing loudly to scare the rats away.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 finds a rat costume and decides to blend in with the rats for fun.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 and _2 have a cookie bake-off and end up laughing over their creations.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 participates in a trivia contest and wins a _nw as a small prize.",
+      "players": 1,
+      "requires weapon": false
+    },
+
+
+    {
+      "type": "confrontation",
+      "prompt": "_1 is showing off their _w when they accidentally drop it into a deep ravine.",
+      "players": 1,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "lost"
+        }
+      ]
+    },{
+      "type": "special-rat invation",
+      "prompt": "_1 and _2 build a maze for the rats to run through, keeping them distracted.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 finds a stash of cheese and uses it to lure the rats away from their camp.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-rat invation",
+      "prompt": "_1 and _2 create a makeshift rat trap and manage to capture a few rats.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 finds a hidden cave and decides to use it as shelter.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 gathers berries from a bush and eats them cautiously.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 gathers berries from a bush and eats them cautiously. They start to feel sick.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 work together to build a raft for crossing a river.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "active"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 discovers a patch of edible mushrooms and collects them for later.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 discovers an abandoned camp that seems to be used by _2.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 starts a fire to keep warm during the cold night.",
+      "players": 1,
+      "requires weapon": false
+    },
+
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 are fighting when _2 manages to knock _1's _w out of their hand, sending it flying into the river.",
+      "players": 2,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "lost"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 tries to throw their _w at a target but misses completely, losing it in the bushes.",
+      "players": 1,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "lost"
+        }
+      ]
+    },
+    {
+      "type": "Survival",
+      "prompt": "_1's _w gets stuck in a tree trunk after they tried to show off their strength to _2.",
+      "players": 2,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "lost"
+        },
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "active"
+        }
+      ]
+    },
+    {
+      "type": "Survival",
+      "prompt": "_1 uses their _w to pry open a box, but it breaks in the process, rendering it useless.",
+      "players": 1,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "lost"
+        }
+      ]
+    },
+
+    {
+      "type": "Survival",
+      "prompt": "_1 tries to catch a fish using their _w but ends up losing it in the water.",
+      "players": 1,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "lost"
+        }
+      ]
+    },
+
+    {
+      "type": "special-cookieparty",
+      "prompt": "_1 and _2 formed an alliance after bonding over their love of cookies.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+
+    {
+      "type": "alliance",
+      "prompt": "_1 and _2 form a temporary truce to gather resources.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 spots a _nw and quickly snatches it before anyone else.",
+      "players": 1,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 and _2 decide to team up and run away together while holding hands.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 runs away from the Cornucopia in a panic and trips over a rock, injuring themselves.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 mistakenly thinks the games have started ran from the platform too early. They got smited by god.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 spots _2 in trouble and helps them, forming an unexpected alliance.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 grabs a _nw and immediately retreats to the forest.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "new"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 and _2 both reach for the same _nw. They lock eyes as their hands touch, ROMANCE STARTED",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        },
+        {
+          "type": "weapon",
+          "players": [1],
+          "condition": "new"
+        }
+
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 grabs a Funko Pop! figurine and waves it triumphantly. What now?",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 and _2 lock eyes over a pile of comic books and fall in love at first sight.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 accidentally triggers a confetti cannon and is showered in colorful paper.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 grabs a superhero cape and puts it on, feeling invincible.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 finds a tree that looks like it has a face and starts talking to it for companionship.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 discovers a hidden stash of candy and eats it all in one sitting.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 receives a package from a supporter containing a plush blanket. They snuggle up and feel a bit more secure.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 gets a delivery of gourmet chocolates from their sugar daddy. They savor each bite, feeling fancy.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 finds a stylish hat sent by a sugar mommy. They wear it proudly, feeling more confident.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 receives a package containing a shiny new _nw from a supporter. They feel ready to face any challenge.",
+      "players": 1,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 gets a delivery from a sugar daddy with a powerful _nw. They grin with newfound confidence.",
+      "players": 1,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 receives a mysterious package. Upon opening it, a poisonous gas is released, killing them instantly.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 opens a package from a supporter, but it explodes, killing them instantly.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 grabs a Hatsune Miku plush and runs.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 booped _2 and runs.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1 grabbed a bag of dice.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "cornucopia",
+      "prompt": "_1, _2, and _3 started fighting over a cute Pokémon bag. _1 got it.",
+      "players": 3,
+      "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 bonked _2 on the head.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 grabs a bottle of alcohol.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 are besties for life now.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 is thinking about _2.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 is looking for the gays, the bi’s, the trans, the girls, and the big bald men.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 desperately wants to take a shower.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 is practicing their DnD roleplay.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1, _2, _3, and _4 are thinking of ship names for the other tributes.",
+      "players": 4,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 is singing and dancing to Cha Cha Cha.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "Pride flags are getting hung up by _1 and _2.",
+      "players": 2,
+      "requires weapon": false
+    },{
+      "type": "survival",
+      "prompt": "_1 receives money from their sugar parental figure. Not sure what to do with it here.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 steps on a Lego.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 make gyoza.",
+      "players": 2,
+      "requires weapon": false
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 picks flowers for _2.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "alliance",
+            "players": [1, 2],
+            "condition": "active"
+            }
+        ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 chokes _2. They're into it but they still die.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 chokes _2. They're not into it and die.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 stabs _2 in the back metaphorically and literally.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 couldn’t agree on what the top 5 Eurovision 2023 songs are. _1 got so pissed that they stabbed _2 in the chest with their _w.",
+      "players": 2,
+      "requires weapon": true,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 got murdered by Batman Pikachu.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 used confusion on _2. _2 stabs themselves in their confusion.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1, _2, and _3 keep chanting 'Crazy? I was crazy once.' (etc). This made _2 actually go crazy, killing them.",
+      "players": 3,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 killed _2 in Minecraft and lost all their stuff, so _2 killed them IRL.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 rolled a nat 1 for athletics and failed their jump. They fall into the abyss.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 are playing Smash Bros. _1 defeated _2. _2 got salty, smashing _1 IRL.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1, _2, and _3 are trying to summon a demon but failed so horribly, killing them all.",
+      "players": 3,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1, 2, 3],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1, _2, and _3 are trying to summon a demon. They succeed, killing _4.",
+      "players": 4,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [4],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 had a heatstroke and dies.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 got lost. They saw _3 and killed them for their food.",
+      "players": 3,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [3],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 got attacked by a group of furries.",
+      "players": 2,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1, 2],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1, _2, and _3 took pictures of other cosplayers. They did not like that and killed them all.",
+      "players": 3,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1, 2, 3],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 ate a whole waffle with a lot of chocolate. They got extremely sick and dies.",
+      "players": 1,
+      "requires weapon": false,
+      "conditions": [
+        {
+          "type": "life",
+          "players": [1],
+          "condition": "dead"
+        }
+      ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 enters a cosplay contest and wins a special _nw as a prize.",
+      "players": 1,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 gets lost in the merchandise hall.",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "special-comic con",
+      "prompt": "_1 and _2 get into an argument over a limited edition figure and end up fighting. _1 wins and takes the figure.",
+      "players": 2,
+      "requires weapon": false,
+"conditions": [
+        {
+          "type": "alliance",
+            "players": [1, 2],
+            "condition": "active end"
+        }
+      ]
+    },
+
+    {
+      "type": "survival",
+      "prompt": "_1 and _2 do the Spider-Man kiss.",
+      "players": 2,
+      "requires weapon": false
+    },
+
+    {
+      "type": "survival",
+      "prompt": "_1 discovers a hidden stash of candy and eats it all in one sitting, getting a sugar rush.",
+      "players": 1,
+      "requires weapon": false
+    },
+
+
+    {
+      "type": "cornucopia",
+      "prompt": "_1 picks up a _nw and uses it as a weapon.",
+      "players": 1,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+
+
+
+    {
+      "type": "survival",
+      "prompt": "_1 builds a shelter to protect themselves from the harsh weather.",
+      "players": 1,
+      "requires weapon": false
+    },
+
+
+    {
+      "type": "cornucopia",
+        "prompt": "_1 grabs a backpack and retreats.",
+        "players": 1,
+        "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 attacks _2 with their _w, but _2 manages to escape.",
+      "players": 2,
+      "requires weapon": true
+    },
+    {
+      "type": "cornucopia",
+        "prompt": "_1 picks up _2 and runs away.",
+        "players": 2,
+        "requires weapon": false,
+      "conditions": [
+        {
+          "type": "alliance",
+          "players": [1, 2],
+          "condition": "start"
+        }
+      ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 fight for a _nw. _2 gives up and retreats.",
+      "players": 2,
+      "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            }
+        ]
+    },
+    {
+      "type": "survival",
+      "prompt": "_1 is crying",
+      "players": 1,
+      "requires weapon": false
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_1 and _2 both wanted the _nw but _1 got it first and killed _2 with it.",
+        "players": 2,
+        "requires weapon": false,
+        "conditions": [
+            {
+            "type": "weapon",
+            "players": [1],
+            "condition": "new"
+            },
+            {
+            "type": "life",
+            "players": [2],
+            "condition": "dead"
+            }
+          ]
+    },
+    {
+      "type": "confrontation",
+      "prompt": "_2 accidentally saw _1 and _3 kissing and _1 killed _2 with their _w to keep the secret.",
+        "players": 3,
+        "requires weapon": true,
+        "conditions": [
+            {
+            "type": "life",
+            "players": [2],
+            "condition": "dead"
+            },
+          {
+            "type": "alliance",
+            "players": [1, 3],
+            "condition": "active"
+          }
+          ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="background" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cookielounge.cookiegames.controller.StartupController">
+   <children>
+      <Rectangle fx:id="backgroundRectangle" arcHeight="5.0" arcWidth="5.0" fill="#f5dad2" height="400.0" layoutX="50.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="600.0" AnchorPane.bottomAnchor="50.799999999999955" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.799999999999955" AnchorPane.topAnchor="50.0">
+         <effect>
+            <Blend />
+         </effect>
+      </Rectangle>
+      <TextField fx:id="nrOfPeopleInput" layoutX="67.0" layoutY="102.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="100.0" />
+      <Text layoutX="67.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ammount of people" AnchorPane.leftAnchor="82.0" AnchorPane.topAnchor="80.0" />
+      <Accordion layoutX="249.0" layoutY="136.0" />
+      <CheckBox fx:id="teamsBox" layoutX="82.0" layoutY="163.0" mnemonicParsing="false" selected="true" text="Teams" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="150.0" />
+      <Button id="button" fx:id="listButton" layoutX="242.0" layoutY="75.0" mnemonicParsing="false" onAction="#updateList" stylesheets="@styles.css" text="Generate" />
+      <FlowPane fx:id="peopleList" layoutX="339.0" layoutY="64.0" prefHeight="379.0" prefWidth="296.0" visible="false" />
+      <Button id="button" layoutX="80.0" layoutY="219.0" mnemonicParsing="false" onAction="#goClick" stylesheets="@styles.css" text="Go" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="200.0" />
+   </children>
+</AnchorPane>

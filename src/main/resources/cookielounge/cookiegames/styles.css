@@ -1,0 +1,18 @@
+#background {
+    -fx-background-color: #FCFFE0;
+}
+#background2 {
+    -fx-background-color: #F5DAD2;
+}
+#colorblock {
+    -fx-background-color: #F5DAD2;
+}
+#button {
+    -fx-background-color: #75A47F;
+}
+#button:hover {
+    -fx-background-color: #598863;
+}
+#button:pressed {
+    -fx-background-color: #304B36;
+}
